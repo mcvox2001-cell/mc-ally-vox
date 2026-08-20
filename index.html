@@ -1,4 +1,575 @@
-<!DOCTYPE html>  <html lang="en">  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MC Ally Vox | MC • Media • Radio • Entertainment</title>
+
+<meta name="description" content="MC Ally Vox — Kenyan MC, media personality, content creator and radio broadcasting enthusiast. Energy. Voice. Entertainment.">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080808;
+  color:#fff;
+  line-height:1.7;
+}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(0,0,0,.92);
+  border-bottom:1px solid #222;
+}
+
+.nav{
+  max-width:1100px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.logo span{
+  color:#ffcc00;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:#ffcc00;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px 70px;
+  background:
+    radial-gradient(circle at center,#252000 0%,#0b0b0b 40%,#050505 100%);
+}
+
+.hero-content{
+  max-width:850px;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 16px;
+  border:1px solid #ffcc00;
+  border-radius:30px;
+  color:#ffcc00;
+  font-size:13px;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(45px,9vw,90px);
+  line-height:1;
+  font-weight:900;
+  letter-spacing:3px;
+}
+
+.hero h1 span{
+  color:#ffcc00;
+}
+
+.hero h2{
+  margin:25px 0 15px;
+  font-size:clamp(20px,4vw,32px);
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  color:#ccc;
+}
+
+.buttons{
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:13px 22px;
+  margin:6px;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.primary{
+  background:#ffcc00;
+  color:#000;
+}
+
+.secondary{
+  border:1px solid #ffcc00;
+  color:#ffcc00;
+}
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:90px 20px;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:35px;
+}
+
+.section-title span{
+  color:#ffcc00;
+}
+
+.section-title p{
+  color:#aaa;
+}
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.card{
+  background:#111;
+  border:1px solid #252525;
+  border-radius:18px;
+  padding:30px;
+}
+
+.card h3{
+  color:#ffcc00;
+  margin-bottom:12px;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.service{
+  background:#111;
+  padding:28px;
+  border-radius:16px;
+  border:1px solid #242424;
+  transition:.3s;
+}
+
+.service:hover{
+  transform:translateY(-6px);
+  border-color:#ffcc00;
+}
+
+.service .icon{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.service h3{
+  color:#ffcc00;
+  margin-bottom:8px;
+}
+
+.service p{
+  color:#bbb;
+  font-size:14px;
+}
+
+.media-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.media-box{
+  min-height:190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(145deg,#151515,#090909);
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:25px;
+}
+
+.media-box h3{
+  color:#ffcc00;
+  margin-bottom:8px;
+}
+
+.booking{
+  text-align:center;
+  background:linear-gradient(145deg,#161300,#0c0c0c);
+  border:1px solid #4a3c00;
+  border-radius:22px;
+  padding:55px 25px;
+}
+
+.booking h2{
+  font-size:38px;
+  margin-bottom:12px;
+}
+
+.booking p{
+  color:#ccc;
+  max-width:650px;
+  margin:0 auto 25px;
+}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
+}
+
+.social{
+  text-decoration:none;
+  color:#fff;
+  border:1px solid #333;
+  padding:10px 18px;
+  border-radius:25px;
+}
+
+.social:hover{
+  border-color:#ffcc00;
+  color:#ffcc00;
+}
+
+footer{
+  text-align:center;
+  padding:35px 20px;
+  border-top:1px solid #222;
+  color:#888;
+}
+
+footer strong{
+  color:#ffcc00;
+}
+
+@media(max-width:800px){
+  nav{
+    display:none;
+  }
+
+  .about,
+  .services,
+  .media-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    letter-spacing:1px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">MC <span>ALLY VOX</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <div class="badge">OFFICIAL WEBSITE</div>
+
+    <!-- PHOTO WILL BE ADDED HERE TOMORROW -->
+
+    <h1>MC <span>ALLY VOX</span></h1>
+
+    <h2>MC • Media Personality • Content Creator</h2>
+
+    <p>
+      Energy. Voice. Entertainment.
+      A Kenyan MC, media personality and content creator
+      passionate about entertainment, broadcasting and connecting with people.
+    </p>
+
+    <div class="buttons">
+      <a class="btn primary" href="#contact">BOOK MC ALLY VOX</a>
+      <a class="btn secondary" href="#media">EXPLORE MEDIA</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+
+  <div class="section-title">
+    <h2>About <span>MC Ally Vox</span></h2>
+    <p>The voice behind the energy.</p>
+  </div>
+
+  <div class="about">
+
+    <div class="card">
+      <h3>Who Is MC Ally Vox?</h3>
+
+      <p>
+        MC Ally Vox is a Kenyan Master of Ceremonies,
+        content creator, media personality and entertainment host
+        with a passion for communication, entertainment and audience engagement.
+      </p>
+
+      <br>
+
+      <p>
+        With roots in Samburu, Kwale County, Kenya,
+        MC Ally Vox continues to build his personal brand
+        through entertainment, digital content and media.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>My Vision</h3>
+
+      <p>
+        To build MC Ally Vox into a recognizable Kenyan
+        entertainment and media brand while creating meaningful
+        connections with audiences through events, digital content,
+        radio and broadcasting.
+      </p>
+
+      <br>
+
+      <p>
+        Passionate about radio broadcasting, journalism,
+        public speaking and digital media.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="services">
+
+  <div class="section-title">
+    <h2>What I <span>Do</span></h2>
+    <p>Entertainment, communication and media.</p>
+  </div>
+
+  <div class="services">
+
+    <div class="service">
+      <div class="icon">🎤</div>
+      <h3>Master of Ceremonies</h3>
+      <p>
+        Professional event hosting, crowd engagement,
+        announcements and memorable event experiences.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="icon">🔥</div>
+      <h3>Hype Master</h3>
+      <p>
+        High-energy crowd control and entertainment
+        designed to keep audiences engaged.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="icon">📱</div>
+      <h3>Content Creation</h3>
+      <p>
+        Entertainment, real talk, commentary, poetry,
+        social content and digital storytelling.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="icon">📺</div>
+      <h3>Media Personality</h3>
+      <p>
+        Media appearances, interviews, entertainment hosting
+        and digital media projects.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="icon">📻</div>
+      <h3>Radio & Broadcasting</h3>
+      <p>
+        Passionate about radio presenting, broadcasting,
+        journalism and connecting with listeners.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="icon">🎬</div>
+      <h3>Entertainment Hosting</h3>
+      <p>
+        Hosting entertainment programs, digital shows,
+        interviews and audience-focused productions.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="media">
+
+  <div class="section-title">
+    <h2>Media & <span>Content</span></h2>
+    <p>MC Ally Vox across entertainment and digital media.</p>
+  </div>
+
+  <div class="media-grid">
+
+    <div class="media-box">
+      <div>
+        <h3>📺 Video Content</h3>
+        <p>Entertainment, real talk, commentary and digital shows.</p>
+      </div>
+    </div>
+
+    <div class="media-box">
+      <div>
+        <h3>🎙️ Interviews</h3>
+        <p>Conversations with personalities, creators and entertainers.</p>
+      </div>
+    </div>
+
+    <div class="media-box">
+      <div>
+        <h3>📻 Radio</h3>
+        <p>Broadcasting, radio presenting and media development.</p>
+      </div>
+    </div>
+
+    <div class="media-box">
+      <div>
+        <h3>📰 Entertainment</h3>
+        <p>Entertainment stories, commentary and Kenyan culture.</p>
+      </div>
+    </div>
+
+    <div class="media-box">
+      <div>
+        <h3>🎥 Digital Media</h3>
+        <p>Social media content and modern digital storytelling.</p>
+      </div>
+    </div>
+
+    <div class="media-box">
+      <div>
+        <h3>🎤 Event Media</h3>
+        <p>Event hosting, audience interaction and entertainment.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <div class="booking">
+
+    <h2>Book <span>MC Ally Vox</span></h2>
+
+    <p>
+      Looking for an energetic MC, Hype Master, entertainment host
+      or media personality for your next event or project?
+      Let's connect.
+    </p>
+
+    <a class="btn primary"
+       href="https://wa.me/254115720706?text=Hello%20MC%20Ally%20Vox%2C%20I%20would%20like%20to%20book%20you.">
+       💬 BOOK VIA WHATSAPP
+    </a>
+
+    <a class="btn secondary"
+       href="tel:+254115720706">
+       📞 CALL MC ALLY VOX
+    </a>
+
+    <div class="socials">
+
+      <!-- Replace these links with your real social media links -->
+
+      <a class="social" href="#" target="_blank">Facebook</a>
+
+      <a class="social" href="#" target="_blank">TikTok</a>
+
+      <a class="social" href="#" target="_blank">Instagram</a>
+
+      <a class="social" href="#" target="_blank">YouTube</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+
+  <p>
+    © 2026 <strong>MC Ally Vox</strong>.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Energy. Voice. Entertainment.
+  </p>
+
+</footer>
+
+</body>
+          </html><!DOCTYPE html>  <html lang="en">  
 <head>  
 <meta charset="UTF-8">  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
